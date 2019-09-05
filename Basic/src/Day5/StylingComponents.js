@@ -1,9 +1,10 @@
 import React ,{Component} from 'react';
-import Person from '../person/Person';
-import '../App.css';
+import Radium from 'radium';
+import Person from '../person/Person'
+import '../App.css'
 
 
-class OutputtingLists extends Component
+class StylingComponents extends Component
 {
     state = {
         persons: [
@@ -11,7 +12,6 @@ class OutputtingLists extends Component
           { id: 'vasdf1', name: 'sonu', age: 21 },
           { id: 'asdf11', name: 'bhagya', age: 22 },
           { id: 'asfa1sfdfg', name: 'madhvi', age: 23 }
-
         ],
         otherState: 'some other value',
         showPersons: false
@@ -55,7 +55,11 @@ class OutputtingLists extends Component
           font: 'inherit',
           border: '1px solid blue',
           padding: '8px',
-          cursor: 'pointer'
+          cursor: 'pointer',
+          ':hover':{
+              backgroundColor:'lightgreen',
+              color:'black'
+          }
         };
     
         let persons = null;
@@ -75,11 +79,29 @@ class OutputtingLists extends Component
           );
 
           style.backgroundColor='red';
+          style[":hover"]={
+              backgroundColor:'white',
+              color:'black'
+          }
         }
+
+        let classes =[];
+
+        if(this.state.persons.length <=2)
+        {
+            classes.push('red');
+        }
+
+        if(this.state.persons.length <=1)
+        {
+            classes.push('italicWord');
+        }
+
+
     
         return (
           <div className="App">
-            
+            <p className={classes.join(' ')}>Working!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
             <button
               style={style}
               onClick={this.togglePersonsHandler}>Toggle Persons</button>
@@ -90,4 +112,4 @@ class OutputtingLists extends Component
       }
     }
 
-export default OutputtingLists;
+export default Radium(StylingComponents);
