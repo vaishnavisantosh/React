@@ -9,7 +9,8 @@ import Day3 from './Day3/methodRef';
 import Day3_1 from './Day3/addingTwoWayBinding';
 import App1 from './Assignments/AssignmentNo1/App1';
 import OutputList from './Day4/OutputtingList';
-import StylingComponents from './Day5/StylingComponents'
+import StylingComponents from './Day5/StylingComponents';
+import CssModule from './Day5/CssModule';
 
 
 //ReactDOM.render(<App1/>,document.getElementById('root'));
@@ -18,7 +19,9 @@ import StylingComponents from './Day5/StylingComponents'
 //ReactDOM.render(<Day3 />,document.getElementById('root'));
 //ReactDOM.render(<Day3_1 />,document.getElementById('root'));
 //ReactDOM.render(<OutputList/>,document.getElementById('root'));
-ReactDOM.render(<StylingComponents/>,document.getElementById('root'));
+//ReactDOM.render(<StylingComponents/>,document.getElementById('root'));
+ReactDOM.render(<CssModule/>,document.getElementById('root'));
+
 
 
 serviceWorker.unregister();

@@ -1,7 +1,7 @@
 import React ,{Component} from 'react';
+import Styles from '../App.css';
 
-import Person from '../person/Person'
-import '../App.css'
+import Person from '../person/Person';
 
 
 class CssModule extends Component
@@ -75,7 +75,7 @@ class CssModule extends Component
             </div>
           );
 
-          style.backgroundColor='red';
+          style.backgroundColor=Styles.red;
           
         }
 
@@ -83,16 +83,16 @@ class CssModule extends Component
 
         if(this.state.persons.length <=2)
         {
-            classes.push('red');
+            classes.push(Styles.red);
         }
 
         if(this.state.persons.length <=1)
         {
-            classes.push('italicWord');
+            classes.push(Styles.italicWord);
         }
         
         return (
-          <div className="App">
+          <div className={Styles.App}>
             <p className={classes.join(' ')}>Working!!!!!!!!!!!!!!!!!!!!!!!!!!!</p>
             <button
               style={style}
