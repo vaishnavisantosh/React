@@ -1,10 +1,10 @@
 import React ,{Component} from 'react';
-import Radium from 'radium';
+
 import Person from '../person/Person'
 import '../App.css'
 
 
-class StylingComponents extends Component
+class CssModule extends Component
 {
     state = {
         persons: [
@@ -56,10 +56,7 @@ class StylingComponents extends Component
           border: '1px solid blue',
           padding: '8px',
           cursor: 'pointer',
-          ':hover':{
-              backgroundColor:'lightgreen',
-              color:'black'
-          }
+          
         };
     
         let persons = null;
@@ -79,10 +76,7 @@ class StylingComponents extends Component
           );
 
           style.backgroundColor='red';
-          style[":hover"]={
-              backgroundColor:'white',
-              color:'black'
-          }
+          
         }
 
         let classes =[];
@@ -110,4 +104,4 @@ class StylingComponents extends Component
       }
     }
 
-export default Radium(StylingComponents);
+export default CssModule;
